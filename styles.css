@@ -1,9 +1,9 @@
 /* styles.css */
 :root {
-    --primary-color: #3d4633;
-    --accent-color: #222922;
-    --background-light: #717476;
-    --text-dark: #101511;
+    --primary-color: #23162e;
+    --accent-color: #4e325c;
+    --background-light: #2e2b4d;
+    --text-dark: #050205;
 }
 
 * {
@@ -21,7 +21,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 1.5rem 5%;
-    background: white;
+    background: #ffff;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
@@ -236,19 +236,89 @@ body {
     padding: 5px 15px;
     border-radius: 20px;
 }
+/* Menú Hamburguesa */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
 
+/* Clase de utilidad */
+.hidden {
+    display: none !important;
+}
+
+/* Transiciones suaves */
+.nav-list {
+    transition: transform 0.3s ease;
+}
+
+/* Mejor visibilidad en móvil */
+.nav-link {
+    color: var(--text-dark);
+    font-size: 1.2rem;
+}
+
+.nav-link:hover {
+    background: var(--background-light);
+}
+/* Menú para móviles */
 @media (max-width: 768px) {
+    .hamburger-btn {
+        display: block;
+    }
+
     .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease-in-out;
+        padding-top: 5rem;
+        z-index: 1000;
+    }
+
+    .nav.active {
+        right: 0;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-link {
+        padding: 1.5rem;
+        display: block;
+        border-bottom: 1px solid #eee;
+    }
+
+    .close-icon {
+        font-size: 2.5rem;
+        line-height: 1;
+    }
+
+    /* Overlay para fondo oscuro */
+    .nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
         display: none;
+        z-index: 999;
     }
-    
-    .hero-content h2 {
-        font-size: 2rem;
-    }
-    
-    .nav-btn {
-        font-size: 2rem;
-        width: 40px;
-        height: 40px;
+
+    .nav-overlay.active {
+        display: block;
     }
 }
