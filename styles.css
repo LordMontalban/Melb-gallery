@@ -1,0 +1,254 @@
+/* styles.css */
+:root {
+    --primary-color: #3d4633;
+    --accent-color: #222922;
+    --background-light: #717476;
+    --text-dark: #101511;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 5%;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+.nav a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: var(--accent-color);
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('assets/photos/hero-bg.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    padding: 1rem 2.5rem;
+    background: var(--accent-color);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+}
+
+.gallery {
+    padding: 4rem 5%;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.photo-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 4/5;
+    cursor: zoom-in;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.photo-item:hover img {
+    transform: scale(1.05);
+}
+
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.5rem;
+    margin: 0 0.5rem;
+    border: 2px solid var(--primary-color);
+    background: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.footer {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.lightbox.hidden {
+    display: none;
+}
+
+.lightbox-content {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    transition: opacity 0.3s;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    z-index: 99999;
+}
+
+.close-btn:hover {
+    transform: scale(1.2);
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+.photo-counter {
+    position: absolute;
+    bottom: 20px;
+    color: white;
+    font-size: 1.2rem;
+    background: rgba(0,0,0,0.5);
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .nav-btn {
+        font-size: 2rem;
+        width: 40px;
+        height: 40px;
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mel Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">Mel Gallery</h1>
+        <nav class="nav">
+            <a href="#gallery">Galería</a>
+            <a href="#about">Sobre Melba</a>
+            <a href="#contact">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>La magia en cada rincón</h2>
+            <button class="cta-button" onclick="showGallery()">Ver galería</button>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery hidden">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-category="all">Todas</button>
+            <button class="filter-btn" data-category="nature">Naturaleza</button>
+            <button class="filter-btn" data-category="urban">Urbano</button>
+        </div>
+        <div class="photo-grid" id="photoGrid"></div>
+    </section>
+
+    <div id="lightbox" class="lightbox hidden">
+        <span class="close-btn">&times;</span>
+        <div class="lightbox-content">
+            <button class="nav-btn prev-btn">&lt;</button>
+            <img class="lightbox-img" src="" alt="Imagen ampliada">
+            <button class="nav-btn next-btn">&gt;</button>
+        </div>
+        <div class="photo-counter"></div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2024 Melba Marina. Hecho con pasión.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
