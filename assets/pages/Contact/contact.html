@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mel Gallery</title>
+    <link rel="stylesheet" href="/assets/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">Mel Gallery</h1>
+        <nav class="nav">
+            <a href="/index.html">Home</a>
+            <a href="/assets/pages/Gallery/gallery.html">Galería</a>
+            <a href="/assets/pages/About/about.html">Sobre Melba</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>¿Te interesa mi trabajo?</h2>
+            <button class="cta-button" onclick="showContactForm()">Contactanos</button>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section hidden">
+        <div class="contact-container">
+            <h2 class="section-title">Contacta con Melba</h2>
+            
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required 
+                           placeholder="Ej: Luis Pérez"
+                           pattern="[A-Za-zÁ-ú\s]{3,50}">
+                    <span class="validation-error"></span>
+                </div>
+    
+                <div class="form-group">
+                    <label for="email">Correo:</label>
+                    <input type="email" id="email" name="email" required
+                           placeholder="ejemplo@email.com">
+                    <span class="validation-error"></span>
+                </div>
+    
+                <div class="form-group">
+                    <label for="subject">Motivo:</label>
+                    <select id="subject" name="subject" required>
+                        <option value="" disabled selected>Selecciona un motivo</option>
+                        <option value="collab">Colaboración</option>
+                        <option value="prints">Compra de prints</option>
+                        <option value="session">Sesión fotográfica</option>
+                        <option value="other">Otro</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" required
+                              placeholder="Escribe tu mensaje aquí..."
+                              minlength="20" maxlength="500"></textarea>
+                    <span class="validation-error"></span>
+                    <div class="char-counter"><span>0</span>/500</div>
+                </div>
+    
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">Enviar mensaje</span>
+                    <div class="loading-spinner hidden"></div>
+                </button>
+            </form>
+    
+            <div id="successMessage" class="success-message hidden">
+                ✔️ Mensaje enviado con éxito
+            </div>
+        </div>
+    </section>
+
+   
+    <footer class="footer">
+        <p>© 2024 Melba Marina. Hecho con pasión.</p>
+    </footer>
+
+    <script src="contact.html"></script>
+</body>
+</html>

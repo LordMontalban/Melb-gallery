@@ -20,12 +20,20 @@ const categories = [
         folder: 'portraits', 
         count: 0,
         prefix: 'portraits'
+    },
+    { 
+        name: 'lab', 
+        display: 'Laboratorio', 
+        folder: 'lab', 
+        count: 10,
+        prefix: 'lab'
     }
 ];
 
 let photos = [];
 let currentFilteredPhotos = [];
 let currentPhotoIndex = 0;
+
 
 function generatePhotos() {
     categories.forEach(category => {
