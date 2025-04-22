@@ -23,7 +23,7 @@ const categories = [
     },
     { 
         name: 'lab', 
-        display: 'Laboratorio', 
+        display: 'Hospital, 
         folder: 'lab', 
         count: 10,
         prefix: 'lab'
