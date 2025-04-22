@@ -143,8 +143,8 @@ body {
     margin-top: 4rem;
 }
 .active {
-    border: 5px --primary-color;
-    border-bottom-style: outset&;
+    border: 5px var(--primary-color);
+    border-bottom-style: outset;
 }
 /* Lightbox */
 .lightbox {
