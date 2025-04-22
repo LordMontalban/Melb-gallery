@@ -11,17 +11,95 @@
     <header class="header">
         <h1 class="logo">Mel Gallery</h1>
         <nav class="nav">
-            <a href="/index.html">Home</a>
-            <a href="/gallery.html">Galería</a>
-            <a href="/contact.html">Contacto</a>
+            <a href="index.html" >Inicio</a>
+            <a href="gallery.html">Galería</a>
+            <a href="about.html" class="active">Sobre Mi</a>
+            <a href="contact.html">Contacto</a>
         </nav>
     </header>
 
-    <section class="hero">
+    <!-- Menú Hamburguesa -->
+    <button class="hamburger-btn">
+        <span class="hamburger-icon">☰</span>
+        <span class="close-icon hidden">×</span>
+    </button>
+</header>
+
+<!-- Sección About -->
+<main class="about-main">
+    <section class="about-hero">
         <div class="hero-content">
-            
+            <h2>Capturando momentos, creando arte</h2>
         </div>
     </section>
+
+    <section class="about-content">
+        <div class="about-container">
+            <article class="bio-section">
+                <div class="bio-text">
+                    <h3>Hola, soy Melba</h3>
+                    <p>Desde que tengo memoria, la fotografía ha sido mi lenguaje para conectar con el mundo. Lo que comenzó como un hobby en las calles de mi ciudad natal, se ha convertido en una pasión que da forma a mi vida diaria.</p>
+                    
+                    <div class="key-points">
+                        <div class="key-card">
+                            <div class="key-icon">📷</div>
+                            <h4>+5 años</h4>
+                            <p>Experiencia profesional</p>
+                        </div>
+                        <div class="key-card">
+                            <div class="key-icon">🌍</div>
+                            <h4>12 países</h4>
+                            <p>Fotografiados</p>
+                        </div>
+                        <div class="key-card">
+                            <div class="key-icon">🎨</div>
+                            <h4>100% artesanal</h4>
+                            <p>Edición manual</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bio-image">
+                    <img src="assets/about/melba-profile.jpg" alt="Melba en acción">
+                </div>
+            </article>
+
+            <section class="timeline-section">
+                <h3>Mi trayectoria</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>2018 - Primer cámara profesional</h4>
+                            <p>Adquisición de mi primera cámara réflex, iniciando el camino hacia la fotografía artística.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>2020 - Primera exposición</h4>
+                            <p>Exposición colectiva en el Centro Cultural de la Ciudad con la serie "Urban Souls".</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>2023 - Reconocimiento internacional</h4>
+                            <p>Mención de honor en el concurso World Photography Awards por la foto "Dawn in the Andes".</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="philosophy-section">
+                <blockquote>
+                    "La verdadera fotografía no se captura con la cámara, sino con el corazón"
+                    <cite>- Melba Marina</cite>
+                </blockquote>
+            </section>
+        </div>
+    </section>
+</main>
+
     <footer class="footer">
         <p>© 2024 Melba Marina. Hecho con pasión.</p>
     </footer>

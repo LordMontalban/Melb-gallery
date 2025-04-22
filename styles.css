@@ -261,7 +261,7 @@ body {
 
 .section-title {
     text-align: center;
-    color: var(--primary-color);
+    color: var(--dark-color);
     margin-bottom: 2.5rem;
     font-size: 2.2rem;
 }
@@ -420,6 +420,188 @@ textarea:invalid:not(:placeholder-shown) + .validation-error {
 
 .nav-link:hover {
     background: var(--background-light);
+}
+/* About Page Styles */
+.about-hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('assets/photos/hero-bg.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.about-hero h2 {
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.about-content {
+    padding: 4rem 2rem;
+    background: var(--background-light);
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bio-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.bio-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.key-points {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.key-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.key-card:hover {
+    transform: translateY(-5px);
+}
+
+.key-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.timeline-section {
+    margin: 4rem 0;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+}
+
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: var(--primary-color);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 2rem;
+    position: relative;
+    width: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+    margin-left: auto;
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.timeline-marker {
+    width: 20px;
+    height: 20px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+}
+
+.timeline-item:nth-child(even) .timeline-marker {
+    right: -10px;
+}
+
+.timeline-item:nth-child(odd) .timeline-marker {
+    left: -10px;
+}
+
+.timeline-content {
+    padding: 1.5rem;
+    background: var(--background-light);
+    border-radius: 8px;
+    margin: 0 2rem;
+}
+
+.philosophy-section {
+    text-align: center;
+    margin: 4rem 0;
+}
+
+blockquote {
+    font-size: 1.5rem;
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+cite {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .bio-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .bio-image img {
+        height: 400px;
+    }
+    
+    .key-points {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        margin-left: 0 !important;
+        flex-direction: row !important;
+        text-align: left !important;
+    }
+    
+    .timeline-marker {
+        left: -10px !important;
+    }
+    
+    .timeline-content {
+        margin: 0 0 0 2rem;
+    }
 }
 /* Menú para móviles */
 @media (max-width: 768px) {
