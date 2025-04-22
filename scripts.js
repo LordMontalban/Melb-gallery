@@ -22,7 +22,7 @@ const categories = [
         prefix: 'portraits'
     },
     { 
-        name: 'hospital, 
+        name: 'hospital', 
         display: 'Hospital', 
         folder: 'lab', 
         count: 10,
