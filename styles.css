@@ -142,7 +142,10 @@ body {
     padding: 2rem;
     margin-top: 4rem;
 }
-
+.active {
+    border: 5px --primary-color;
+    border-bottom-style: outset&;
+}
 /* Lightbox */
 .lightbox {
     position: fixed;
