@@ -4,7 +4,7 @@ const categories = [
         name: 'nature', 
         display: 'Naturaleza', 
         folder: 'nature', 
-        count: 40,
+        count: 41,
         prefix: 'nature'  // Nuevo campo para prefijo de archivo
     },
     { 
